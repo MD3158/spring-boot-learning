@@ -16,6 +16,7 @@ import java.util.stream.IntStream;
  * <p>
  * Mọi Request ở trong method sẽ được gắn thêm prefix /api/v1
  */
+
 @RestController
 @RequestMapping("/api/v1")
 public class RestApiController {
@@ -28,7 +29,7 @@ public class RestApiController {
                 .collect(Collectors.toList());
     }
 
-    /*
+    /**
     phần path URL bạn muốn lấy thông tin sẽ để trong ngoặc kép {}
      */
     @GetMapping("/todo/{todoId}")
