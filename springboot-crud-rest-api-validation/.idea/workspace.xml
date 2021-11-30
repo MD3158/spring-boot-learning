@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a94c3b27-198c-4bdf-b611-1e220c484d95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Spring-boot-validation-20/src/main/java/com/example/config/WebConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-boot-validation-20/src/main/java/com/example/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-boot-validation-20/src/main/java/com/example/formbean/AppUserForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-boot-validation-20/src/main/java/com/example/model/AppUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-boot-validation-20/src/main/java/com/example/model/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-boot-validation-20/src/main/java/com/example/model/Gender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-boot-validation-20/src/main/java/com/example/repository/AppUserRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-boot-validation-20/src/main/resources/validation.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Thymeleaf-List/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Thymeleaf-List/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Thymeleaf-List/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Thymeleaf-List/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Thymeleaf-List/src/main/java/com/example/TestThymeleafListApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Thymeleaf-List/src/main/java/com/example/TestThymeleafListApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Thymeleaf-List/src/test/java/com/example/TestThymeleafListApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Thymeleaf-List/src/test/java/com/example/TestThymeleafListApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-20-Mapper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-20-Mapper/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/SpringBoot20MapperApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/SpringBoot20MapperApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/service/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/service/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/service/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-20-Mapper/src/main/java/com/example/springboot20/service/ResourceNotFoundException.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="21civROBBW8TR85ABARqBfLE9ya" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-boot-2-rest-service-validation" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootCrudRestApiValidationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-crud-rest-api-validation" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.guides.springboot.springbootcrudrestapivalidation.SpringbootCrudRestApiValidationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a94c3b27-198c-4bdf-b611-1e220c484d95" name="Changes" comment="" />
+      <created>1638247009119</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638247009119</updated>
+      <workItem from="1638247010890" duration="4211000" />
+      <workItem from="1638257992261" duration="143000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
