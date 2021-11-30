@@ -3,9 +3,8 @@ package com.example.dto;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 @Data
 public class ProductDto {
@@ -16,6 +15,6 @@ public class ProductDto {
     @NotBlank(message = "Name is mandatory")
     private String name;
 
-    @NotNull(message = "Price is mandatory")
+    @Min(value = 1, message = "Price is mandatory")
     private int price;
 }
