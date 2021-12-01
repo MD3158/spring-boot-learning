@@ -27,16 +27,16 @@ public class ProductController {
     }
     @PostMapping("/products")
     public ResponseEntity<ProductDto> add(@Valid @RequestBody ProductDto productDto){
-        return new ResponseEntity<>(service.save(productDto), HttpStatus.OK);
+        return new ResponseEntity(service.save(productDto), HttpStatus.OK);
     }
     @PutMapping("/products/{id}")
     public ResponseEntity<ProductDto> update(@Valid @RequestBody ProductDto productDto, @PathVariable(name = "id") Integer id) {
         service.update(id, productDto);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity(HttpStatus.CREATED);
     }
     @DeleteMapping("/products/{id}")
     public ResponseEntity<ProductDto> delete(@PathVariable Integer id){
         service.delete(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.OK);
     }
 }

@@ -1,19 +1,21 @@
 package com.example.exception;
 
+import org.springframework.http.HttpStatus;
+
 import java.util.Date;
 
 public class ExceptionRespon {
     private Date timestamp;
-//  private String status;
+    private int status;
     private String message;
     private String details;
 
-    public ExceptionRespon(Date timestamp, String message, String details) {
+    public ExceptionRespon(Date timestamp, String message, String details, int status) {
         super();
         this.timestamp = timestamp;
         this.message = message;
         this.details = details;
-//      this.status = status;
+        this.status = status;
     }
 
     public Date getTimestamp() {
@@ -28,8 +30,7 @@ public class ExceptionRespon {
         return details;
     }
 
-//  public String getStatus() {
-//      return status;
-//  }
-
+    public int getStatus() {
+        return status;
+    }
 }

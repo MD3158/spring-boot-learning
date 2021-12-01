@@ -8,7 +8,6 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -28,20 +27,20 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     private String message3;
 
     @ExceptionHandler(value = ProductNotFoundException.class)
-    public ResponseEntity ProductNotFoundException(WebRequest request) {
-        ExceptionRespon exceptionResponse = new ExceptionRespon(new Date(), message1, request.getDescription(false));
+    public ResponseEntity ProductNotFoundException(WebRequest request, ProductNotFoundException ex) {
+        ExceptionRespon exceptionResponse = new ExceptionRespon(new Date(), message1, request.getDescription(false), ex.getStatus().value());
         return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(value = ProductAlreadyExistsException.class)
-    public ResponseEntity ProductAlreadyExistsException(WebRequest request) {
-        ExceptionRespon exceptionResponse = new ExceptionRespon(new Date(), message2, request.getDescription(false));
+    public ResponseEntity ProductAlreadyExistsException(WebRequest request, ProductAlreadyExistsException ex) {
+        ExceptionRespon exceptionResponse = new ExceptionRespon(new Date(), message2, request.getDescription(false), ex.getStatus().value());
         return new ResponseEntity(exceptionResponse, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity databaseConnectionFailsException() {
-        return new ResponseEntity<>(message3, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity(message3, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @Override
@@ -53,7 +52,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
             String errorMessage = error.getDefaultMessage();
             errors.put(fieldName, errorMessage);
         });
-       ExceptionRespon exceptionResponse = new ExceptionRespon(new Date(), errors.toString(), ex.getBindingResult().toString());
+       ExceptionRespon exceptionResponse = new ExceptionRespon(new Date(), errors.toString(), ex.getBindingResult().toString(), status.value());
       return new ResponseEntity(exceptionResponse, HttpStatus.BAD_REQUEST);
     }
 }
