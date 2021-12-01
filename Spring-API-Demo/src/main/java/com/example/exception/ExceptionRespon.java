@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class ExceptionRespon {
     private Date timestamp;
+//  private String status;
     private String message;
     private String details;
 
@@ -12,6 +13,7 @@ public class ExceptionRespon {
         this.timestamp = timestamp;
         this.message = message;
         this.details = details;
+//      this.status = status;
     }
 
     public Date getTimestamp() {
@@ -25,5 +27,9 @@ public class ExceptionRespon {
     public String getDetails() {
         return details;
     }
+
+//  public String getStatus() {
+//      return status;
+//  }
 
 }

@@ -1,36 +1,18 @@
 package com.example.controller;
 
 import com.example.dto.ProductDto;
-import com.example.exception.ProductAlreadyExistsException;
-import com.example.exception.ProductNotFoundException;
 import com.example.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 public class ProductController {
 
-
-//    @ResponseStatus(HttpStatus.BAD_REQUEST)
-//    @ExceptionHandler(MethodArgumentNotValidException.class)
-//    public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex) {
-//        Map<String, String> errors = new HashMap<>();
-//        ex.getBindingResult().getAllErrors().forEach((error) -> {
-//            String fieldName = ((FieldError) error).getField();
-//            String errorMessage = error.getDefaultMessage();
-//            errors.put(fieldName, errorMessage);
-//        });
-//        return errors;
-//    }
 
     @Autowired private ProductService service;
 
@@ -45,13 +27,12 @@ public class ProductController {
     }
     @PostMapping("/products")
     public ResponseEntity<ProductDto> add(@Valid @RequestBody ProductDto productDto){
-        service.save(productDto);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(service.save(productDto), HttpStatus.OK);
     }
     @PutMapping("/products/{id}")
     public ResponseEntity<ProductDto> update(@Valid @RequestBody ProductDto productDto, @PathVariable(name = "id") Integer id) {
         service.update(id, productDto);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
     @DeleteMapping("/products/{id}")
     public ResponseEntity<ProductDto> delete(@PathVariable Integer id){

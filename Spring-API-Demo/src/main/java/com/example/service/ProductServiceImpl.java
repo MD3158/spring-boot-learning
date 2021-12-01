@@ -35,12 +35,15 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void save(ProductDto productDto) {
+    public ProductDto save(ProductDto productDto) {
         if (repo.existsById(productDto.getId())){
             throw new ProductAlreadyExistsException();
         }
         repo.save(mapper.DtoToModel(productDto));
+        return productDto;
     }
+
+
 
     @Override
     public ProductDto getProductById(Integer id){
@@ -54,14 +57,10 @@ public class ProductServiceImpl implements ProductService{
     public void update(Integer id, ProductDto productDto){
         if (repo.findById(id).isEmpty()) {
             throw new ProductNotFoundException();
-        }else if(repo.existsById(productDto.getId()) && productDto.getId() != (repo.findById(id).get().getId())){
-            throw new ProductAlreadyExistsException();
         }
         ProductDto list = mapper.modelToDto(repo.findById(id).get());
         list.setName(productDto.getName());
         list.setPrice(productDto.getPrice());
         repo.save(mapper.DtoToModel(list));
-//        repo.deleteById(id);
-//        repo.save(mapper.DtoToModel(productDto));
     }
 }
