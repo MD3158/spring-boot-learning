@@ -23,7 +23,8 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public List<ProductDto> getAll() {
-        if(mapper.modelsToDtos(repo.findAll()).isEmpty()){
+        List<ProductDto> productDto = mapper.modelsToDtos(repo.findAll());
+        if(productDto.isEmpty()){
             throw new ProductNotFoundException();
         }
         return mapper.modelsToDtos(repo.findAll());
@@ -31,7 +32,8 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public void delete(Integer id) {
-        if (repo.findById(id).isEmpty()){
+        Optional<Product> productOptional = repo.findById(id);
+        if (!productOptional.isPresent()){
             throw new ProductNotFoundException(HttpStatus.NOT_FOUND);
         }
         repo.deleteById(id);
@@ -39,7 +41,8 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product save(ProductDto productDto) {
-        if (repo.existsById(productDto.getId())){
+        Optional<Product> productOptional = repo.findById(productDto.getId());
+        if (!productOptional.isPresent()){
             throw new ProductAlreadyExistsException(HttpStatus.BAD_REQUEST);
         }
         return repo.save(mapper.DtoToModel(productDto));
@@ -47,7 +50,8 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Optional<ProductDto> getProductById(Integer id){
-          if(repo.findById(id).isEmpty()){
+        Optional<Product> productOptional = repo.findById(id);
+        if(!productOptional.isPresent()){
               throw new ProductNotFoundException(HttpStatus.NOT_FOUND);
           }
           return Optional.of(mapper.modelToDto(repo.findById(id).get()));
