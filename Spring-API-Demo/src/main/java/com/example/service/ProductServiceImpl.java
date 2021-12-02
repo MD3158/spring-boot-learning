@@ -45,8 +45,6 @@ public class ProductServiceImpl implements ProductService{
         return repo.save(mapper.DtoToModel(productDto));
     }
 
-
-
     @Override
     public Optional<ProductDto> getProductById(Integer id){
           if(repo.findById(id).isEmpty()){
@@ -56,11 +54,11 @@ public class ProductServiceImpl implements ProductService{
     }
     @Override
     public void update(Integer id, ProductDto productDto){
-        if (repo.findById(id).isEmpty()) {
+        Optional<Product> productOptional = repo.findById(id);
+        if (!productOptional.isPresent()) {
             throw new ProductNotFoundException(HttpStatus.NOT_FOUND);
         }
-        Optional<ProductDto> productDtoOptional = Optional.of(mapper.modelToDto(repo.findById(id).get()));
-        productDto.setId(productDtoOptional.get().getId());
+        productDto.setId(productOptional.get().getId());
         repo.save(mapper.DtoToModel(productDto));
     }
 }
